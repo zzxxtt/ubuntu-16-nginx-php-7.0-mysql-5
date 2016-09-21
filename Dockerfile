@@ -4,7 +4,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 COPY files /
 RUN \
     apt-get update && \
-    apt-get install -y php7.0-cli php7.0-fpm php7.0-common php7.0-curl php7.0-gd php7.0-mysql php7.0-sqlite3 php7.0-xml php7.0-zip php7.0-gettext php7.0-mbstring && \
+    apt-get install -y php7.0-cli php7.0-fpm php7.0-common php7.0-curl php7.0-gd php7.0-mysql php7.0-sqlite3 php7.0-xml php7.0-zip php7.0-gettext php7.0-mbstring php7.0-mcrypt && \
     mkdir /tmp/composer/ && \
     cd /tmp/composer && \
     curl -sS https://getcomposer.org/installer | php && \
@@ -29,5 +29,5 @@ RUN \
     chmod 755 /hooks /var/www && \
     chmod -R 777 /var/www/html /var/log && \
     sed -i -e 's/index index.html/index index.php index.html/g' /etc/nginx/sites-enabled/site.conf && \
-    chmod 666 /etc/nginx/sites-enabled/site.conf 
+    chmod 666 /etc/nginx/sites-enabled/site.conf
 EXPOSE 8080
