@@ -41,4 +41,3 @@ RUN \
     sed -i -e 's/index index.html/index index.php index.html/g' /etc/nginx/sites-enabled/site.conf && \
     chmod 666 /etc/nginx/sites-enabled/site.conf && \
     nginx -t
-EXPOSE 8080
