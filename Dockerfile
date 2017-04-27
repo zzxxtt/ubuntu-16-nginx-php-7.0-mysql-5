@@ -41,4 +41,5 @@ RUN \
     sed -i -e 's/index index.html/index index.php index.html/g' /etc/nginx/sites-enabled/site.conf && \
     chmod 666 /etc/nginx/sites-enabled/site.conf && \
     nginx -t && \
-    chmod -R 777 /run/
+    mkdir -p /run /var/lib/nginx /var/lib/php /var/lib/mysql && \
+    chmod -R 777 /run /var/lib/nginx /var/lib/php /var/lib/mysql
