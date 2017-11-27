@@ -49,7 +49,7 @@ RUN \
   groupadd mysql && \
   useradd -g mysql mysql && \
   apt-get update && \
-  apt-get install -y gettext-base mysql-server pwgen pip && \
+  apt-get install -y gettext-base mysql-server pwgen && \
   rm -rf /var/lib/apt/lists/* /var/lib/mysql /etc/mysql* && \
   mkdir --mode=0777 /var/lib/mysql /var/run/mysqld /etc/mysql && \
   chmod -R 0775 /etc/mysql && \
