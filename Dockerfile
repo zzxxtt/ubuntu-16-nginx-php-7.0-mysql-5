@@ -49,12 +49,11 @@ RUN \
   groupadd mysql && \
   useradd -g mysql mysql && \
   apt-get update && \
-  apt-get install -y gettext-base mysql-server pwgen && \
+  apt-get install -y gettext-base mysql-server pwgen pip && \
   rm -rf /var/lib/apt/lists/* /var/lib/mysql /etc/mysql* && \
   mkdir --mode=0777 /var/lib/mysql /var/run/mysqld /etc/mysql && \
   chmod -R 0775 /etc/mysql && \
   chmod -R 0755 /hooks && \
   chmod -R 0777 /var/log/mysql && \
-  cd /opt/configurability/src/mysql_config_translator && \
   pip --no-cache install --upgrade pip && \
 pip --no-cache install --upgrade .
