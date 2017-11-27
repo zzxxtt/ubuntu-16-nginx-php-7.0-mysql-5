@@ -52,7 +52,6 @@ RUN \
   apt-get install -y gettext-base mysql-server pwgen && \
   rm -rf /var/lib/apt/lists/* /var/lib/mysql /etc/mysql* && \
   mkdir --mode=0777 /var/lib/mysql /var/run/mysqld /etc/mysql && \
-  chmod 0777 /docker-entrypoint-initdb.d && \
   chmod -R 0775 /etc/mysql && \
   chmod -R 0755 /hooks && \
   chmod -R 0777 /var/log/mysql && \
