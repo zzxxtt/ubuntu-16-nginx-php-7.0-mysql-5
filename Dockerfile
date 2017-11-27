@@ -55,3 +55,4 @@ RUN \
   chmod -R 0775 /etc/mysql && \
   chmod -R 0755 /hooks && \
   chmod -R 0777 /var/log/mysql && \
+echo finish
